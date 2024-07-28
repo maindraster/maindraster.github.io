@@ -29,7 +29,6 @@ function customRehypeLazyLoadImage() {
 
 export default defineConfig({
   site: 'https://maindraster.github.io',
-  base: 'my-repo',
   integrations: [sitemap(), tailwind(), solid(), expressiveCode({
     plugins: [pluginLineNumbers(), pluginCollapsibleSections()],
     themes: ["github-dark", "github-light"],
