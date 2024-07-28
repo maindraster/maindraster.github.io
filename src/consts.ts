@@ -16,13 +16,13 @@
  * beian {string} Chinese policy
  */
 export const site = {
-  title: 'Astro Theme Yi', // required
+  title: '困意的博客', // required
   favicon: '/favicon.svg', // required
   description: 'Welcome to my independent blog website! ',
-  author: "Astro-Yi", // required
-  avatar: '/avatar.png', // required
-  motto: 'Actions speak louder than words.',
-  url: 'https://astro-yi-nu.vercel.app',
+  author: "Indra", // required
+  avatar: '/avatar.jpg', // required
+  motto: '飞行员的墓在天空中',
+  url: 'https://maindraster.github.io',
   recentBlogSize: 5,
   archivePageSize: 25,
   postPageSize: 10,
@@ -37,8 +37,8 @@ export const site = {
  * ga {string|false}
  */
 export const config = {
-  busuanzi: false,
-  lang: 'en', // en | zh-cn
+  busuanzi: true,
+  lang: 'zh-cn', // en | zh-cn
   codeFoldingStartLines: 16, // Need to re-run the project to take effect
   ga: false // If you want to integrate with Google Analytics, just enter your GA-ID here.
 }
@@ -52,42 +52,47 @@ export const config = {
  */
 export const categories = [
   {
-    name: "Blog",
+    name: "首页",
+    iconClass: "ri-home-4-line",
+    href: "/",
+  },
+  {
+    name: "博客",
     iconClass: "ri-draft-line",
     href: "/blog/1",
   },
   {
-    name: "Feed",
+    name: "动态",
     iconClass: "ri-lightbulb-flash-line",
     href: "/feed/1",
   },
   {
-    name: "Archive",
+    name: "归档",
     iconClass: "ri-archive-line",
     href: "/archive/1",
   },
   {
-    name: "Message",
+    name: "留言",
     iconClass: "ri-chat-1-line",
     href: "/message",
   },
   {
-    name: "Search",
+    name: "搜索",
     iconClass: "ri-search-line",
     href: "/search",
   },
   {
-    name: "More",
+    name: "更多",
     iconClass: "ri-more-fill",
     href: "javascript:void(0);",
     children: [
       {
-        name: 'About',
+        name: '关于本站',
         iconClass: 'ri-information-line',
         href: '/about',
       },
       {
-        name: 'Friends',
+        name: '友情链接',
         iconClass: 'ri-user-5-line',
         href: '/friends',
         target: '_self',
@@ -101,29 +106,24 @@ export const categories = [
  */
 export const infoLinks = [
   {
-    icon: 'ri-telegram-fill',
-    name: 'telegram',
-    outlink: 'xxxxxxx',
+    icon: "ri-bilibili-fill",
+    name: "bilibili",
+    outlink: "https://space.bilibili.com/3546706348084176",
   },
   {
-    icon: 'ri-twitter-fill',
-    name: 'twitter',
-    outlink: 'xxxxxxx',
-  },
-  {
-    icon: 'ri-instagram-fill',
-    name: 'instagram',
-    outlink: 'xxxxxxx',
+    icon: 'ri-zhihu-fill',
+    name: '知乎',
+    outlink: 'https://www.zhihu.com/people/wen-dao-81-2-70',
   },
   {
     icon: 'ri-github-fill',
     name: 'github',
-    outlink: 'https://github.com/cirry',
+    outlink: 'https://github.com/maindraster',
   },
   {
     icon: 'ri-rss-fill',
     name: 'rss',
-    outlink: 'https://astro-yi-nu.vercel.app/rss.xml',
+    outlink: 'https://maindraster.github.io/rss.xml',
   }
 ]
 
