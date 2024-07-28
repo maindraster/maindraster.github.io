@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "ignoreDeprecations": "5.0",
     "moduleResolution": "node",
     "module": "ES2022",
     "lib": [
