@@ -1,0 +1,242 @@
+/* 移除阴影 */
+.md-header,
+.md-nav--lifted > .md-nav__list > .md-nav__item:first-child > .md-nav__link,
+.md-nav--primary,
+.md-nav__item > .md-nav__link,
+.md-nav__title {
+  box-shadow: none !important;
+}
+
+.md-sidebar--primary {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.md-nav__title {
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 24px 0 8px 24px;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.md-nav__item > .md-nav__link {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  font-size: 0.65rem;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+  line-height: 1;
+}
+
+.md-nav__item > .md-nav__link > .md-icon {
+  margin-right: 12px;
+  width: 1.2em;
+  height: 1.2em;
+  color: #6a737d;
+}
+
+.md-nav__list > .md-nav__item > .md-nav__link,
+.md-nav__item {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.md-nav__item--section > .md-nav__link {
+    text-transform: uppercase !important;  /* 全大写 */
+    font-weight: 700 !important;           /* 加粗 */
+    font-size: 0.75rem !important;         /* 稍小字号 */
+    letter-spacing: 0.5px !important;      /* 字母间距 */
+    color: var(--md-default-fg-color) !important;                /* 灰色 */
+    margin-top: 20px !important;           /* 上方间距 */
+    margin-bottom: 8px !important;         /* 下方间距 */
+    padding-top: 8px !important;           /* 内边距 */
+    padding-bottom: 4px !important;
+}
+
+/* 2. 第一个 Section 不需要上方间距 */
+.md-nav__list > .md-nav__item--section:first-child > .md-nav__link {
+    margin-top: 0 !important;
+}
+
+/* 右侧目录容器 */
+.md-sidebar--secondary {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 隐藏"目录"两个字 */
+.md-sidebar--secondary .md-nav__title {
+  display: none;
+}
+
+/* 右侧目录项样式 */
+.md-sidebar--secondary .md-nav__link {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 0.65rem;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+  line-height: 1.4;
+}
+
+/* 右侧目录悬浮效果 - 和左侧一样的背景色 */
+.md-sidebar--secondary .md-nav__link:hover {
+  background-color: rgba(205, 220, 226, 0.3);  /* 和左侧一样的浅蓝色背景 */
+  color: #1976d2;  /* 可选：悬浮时文字颜色 */
+}
+
+/* 右侧目录激活状态 */
+.md-sidebar--secondary .md-nav__link--active {
+  background-color: rgba(205, 220, 226, 0.5);
+  color: #1976d2;
+  font-weight: 600;
+}
+
+/* 右侧目录滚动条 - 悬浮时才显示 */
+.md-sidebar--secondary .md-sidebar__scrollwrap::-webkit-scrollbar {
+  width: 8px;
+}
+
+.md-sidebar--secondary .md-sidebar__scrollwrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.md-sidebar--secondary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+
+/* 悬浮在右侧边栏时显示滚动条 */
+.md-sidebar--secondary:hover .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background: rgb(205, 220, 226);
+}
+
+.md-sidebar--secondary:hover .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
+  background: rgb(185, 200, 206);
+}
+
+/* Firefox 浏览器 */
+.md-sidebar--secondary .md-sidebar__scrollwrap {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.md-sidebar--secondary:hover .md-sidebar__scrollwrap {
+  scrollbar-color: rgb(205, 220, 226) transparent;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar-thumb {
+  background: rgb(205, 220, 226);
+}
+
+* {
+  scrollbar-color: rgb(205, 220, 226) #f1f1f1;
+}
+
+/* Webkit 浏览器（Chrome, Safari, Edge） */
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+  width: 8px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-track {
+  background: transparent;  /* 默认透明 */
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background: transparent;  /* 默认透明，不显示 */
+  border-radius: 4px;
+}
+
+/* 悬浮在侧边栏区域时显示滚动条 */
+.md-sidebar:hover .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background: rgb(205, 220, 226);  /* 悬浮时显示设置的颜色 */
+}
+
+.md-sidebar:hover .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
+  background: rgb(185, 200, 206);  /* 悬浮在滚动条上时更深 */
+}
+
+/* Firefox 浏览器 */
+.md-sidebar__scrollwrap {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;  /* 默认透明 */
+}
+
+.md-sidebar:hover .md-sidebar__scrollwrap {
+  scrollbar-color: rgb(205, 220, 226) transparent;  /* 悬浮时显示 */
+}
+
+.md-tabs__link {
+    display: inline-flex;
+    align-items: center;
+    
+    padding: 0.4rem 0.6rem;
+    margin: 0.2rem 0.2rem;
+    border-radius: 6px;
+    
+    color: var(--md-default-fg-color);
+    font-weight: 500;
+    
+    transition: background-color 0.2s ease, color 0.2s ease;
+    position: relative;
+    text-decoration: none;
+}
+
+.md-tabs__link:hover {
+    background-color: rgba(56, 165, 184, 0.12) !important;
+    color: #38a5b8 !important;
+}
+
+.md-tabs__item--active .md-tabs__link {
+    background-color: transparent !important;
+    color: #38a5b8 !important;
+    font-weight: 600;
+}
+
+.md-tabs__item--active .md-tabs__link:hover {
+    background-color: rgba(56, 165, 184, 0.1) !important;
+    color: var(--md-default-fg-color) !important;
+}
+
+.md-tabs__item--active .md-tabs__link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 80%;
+    height: 3px;
+    background-color: #38a5b8;
+    border-radius: 2px 2px 0 0;
+}
+
+.md-search__form {
+    background-color: var(--md-default-bg-color);
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    height: 40px;
+}
+
+.md-search__form:hover {
+    border-color: #38a5b8;
+}
+
+.md-search__input {
+    padding-left: 2.8rem;
+    font-size: 14px;
+}
+
+.md-search__form:focus-within {
+    border-color: #38a5b8;
+    box-shadow: 0 0 0 3px rgba(56, 165, 184, 0.1);
+}
+
+.md-search__form:hover {
+    background-color: transparent !important;
+    background-color: var(--md-default-bg-color) !important;
+}
+

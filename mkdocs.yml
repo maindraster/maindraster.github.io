@@ -1,0 +1,124 @@
+site_name: TechKey
+site_url: https://maindraster.github.io/
+repo_url: https://github.com/maindraster/maindraster.github.io
+repo_name: maindraster/maindraster.github.io
+
+theme:
+  name: "material"
+  custom_dir: overrides
+  features:
+    - navigation.instant        # 启用即时加载
+    - navigation.instant.prefetch  # 预加载链接
+    - navigation.tracking
+    - content.code.annotate
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.path
+    - navigation.top
+    - navigation.tabs.sticky
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  font:
+    text: Libre Baskerville
+    code: Roboto Mono
+  language: zh
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: light
+      primary: custom
+      accent: lime
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: dark
+      primary: custom
+      accent: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    logo: techkey/techkey 
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - macros
+  - mkdocs-jupyter:
+      theme: auto
+      highlight_extra_classes: "jupyter-notebook"
+      remove_tag_config:
+        remove_input_tags:
+          - hide-code
+          - hide_code
+          - hide-input
+          - hide_input
+          - remove_input
+          - remove-input
+        remove_cell_tags:
+          - hide-cell
+          - hide_cell
+          - remove-cell
+          - remove_cell
+        remove_all_outputs_tags:
+          - hide-output
+          - hide_output
+          - remove-output
+          - remove_output
+  - include_dir_to_nav:
+      file_pattern: '.*\.(md|ipynb)$'
+  - literate-nav:
+      nav_file: SUMMARY.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html 
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      check_paths: true
+      restrict_base_path: False
+      base_path: "."
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - def_list
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+          percent_encode: False
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/maindraster/maindraster.github.io
+  github_url: https://github.com/maindraster/maindraster.github.io
+  generator: false
+
+extra_javascript:
+  - https://unpkg.com/@popperjs/core@2
+  - https://unpkg.com/tippy.js@6
+  - assets/javascripts/page-thumbnail.js
+  - https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+extra_css:
+  - assets/css/color-schemes.css
+  - assets/css/custom-material.css
+  - assets/css/jupyter-themes.css
+  - assets/css/gitbook.css
+
+copyright: |
+  &copy; Copyright 2025 Indra Tang. All rights reserved.
